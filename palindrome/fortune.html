@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	   {% if fortune == 'good' %}
+       		<h1>{{ fortune }}</h1>
+       {% elif fortune ==
+        'mysterious' %} 
+       	 	<h3>{{ fortune }}</h3> 	
+       {% else %}
+         	{{ fortune }}
+       {% endif %}
+
+       <ul>
+       	 {% for f in all_fortunes %}
+       	 	<li> {{ f }}</li>
+       	 	{% endfor %}
+        </ul>
+     
+
+</body>
+</html>

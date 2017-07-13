@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+		<h1>Random User API</h1>
+
+
+		<table>
+			<tr>
+				<td>Name</td>
+				<td>Gender</td>
+				<td>Email</td>	
+				<td>Location</td>
+				<td>Picture</td>
+			</tr>
+
+			{%for user in content['results'] %}
+			<tr>
+				<td>{{  user['name']['first'] }}</td>
+				<td>{{  user['gender']  }}</td>
+				<td>{{  user['email']  }}</td>
+				<td>{{  user['location']['state']  }}</td>
+				<td> <img src="{{  user['picture']['medium']  }}"></td>
+
+			</tr>
+			{% endfor %}
+
+		</table>	
+		{{ content['results']  }}
+
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Student List</h1>
+	{% for s in students %}
+		<a href="/onestudent.html?id={{s.key.id()}}">Profile</a>
+		{{s.key.id()}}  {{s['name']}}  
+		{{s['grade']}}
+		<br>
+	{% endfor %}
+</body>
+</html>

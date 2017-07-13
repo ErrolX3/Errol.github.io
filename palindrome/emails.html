@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- Show all enail values. -->
+	 {% for email in emails %}
+	 	<div>{{ email  }}</div>
+	 {% endfor %}
+	   <br>
+	   <br>
+
+	   <!-- Show only sender addresses. -->
+	 {% for email in emails %}
+	 <div>{{  email['sender']  }}</div>
+	 {% endfor %}
+	 <br>
+	 <br>
+
+	 <!-- Show only non=spam sender addresses.-->
+	 {% for email in emails %}
+	   {% if email['sender'] != 'fakeaccount@gmail.com' %}
+	   		<div>{{  email['sender'] }}</div>
+	   	{% endif %}
+	  {% endfor %}  	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+			{%for user in content['data'] %}
+			<tr>
+				<td>{{  data['id'] }}</td>
+				<td>{{  data['slug'] }}</td>
+				<td>{{  data['rating'] }}</td>
+				<td> <img src="{{  data['images']['downsized']['url']  }}"></td>
+
+			</tr>
+			{% endfor %}
+
+		</table>
+
+</body>
+</html>
